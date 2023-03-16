@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Clear history and cache</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    padding: 20px;
+    }
+
+    h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    }
+
+    fieldset {
+    margin-bottom: 20px;
+    }
+
+    button {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+    button:hover {
+    background-color: #23527c;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>Clear history and cache</h1>
+    <form id="clear-form">
+      <fieldset>
+        <legend>What do you want to clear?</legend>
+        <label><input type="checkbox" name="browsing-history"> Browsing history</label><br>
+        <label><input type="checkbox" name="search-history"> Search history</label><br>
+        <label><input type="checkbox" name="cache"> Cache</label>
+      </fieldset>
+      <fieldset>
+        <legend>How far back do you want to clear?</legend>
+        <label><input type="radio" name="time" value="hour"> Past hour</label><br>
+        <label><input type="radio" name="time" value="day"> Past 24 hours</label><br>
+        <label><input type="radio" name="time" value="week"> Past week</label><br>
+        <label><input type="radio" name="time" value="month"> Past month</label><br>
+        <label><input type="radio" name="time" value="all" checked> All time</label>
+      </fieldset>
+      <button type="submit" id="clear-button">Clear</button>
+    </form>
+    <script src="popup.js"></script>
+  </body>
+</html>
